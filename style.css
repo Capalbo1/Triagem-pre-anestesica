@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #0baad1;
+    color: white;
+    height: 20vh;
+    text-align: center;
+    position: relative;
+}
+
+header img {
+    width: 15%;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 130vh;
+    padding: 20px;
+}
+
+section {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    transition: transform 0.2s;
+}
+
+section:hover {
+    transform: scale(1.02);
+}
+
+h2 {
+    margin-top: 0;
+    color: #0baad1;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 0.9em;
+}
+
+.cadastro {
+    display: flex;
+    flex-direction: row; /* Define a direção como linha */
+    flex-wrap: wrap; /* Permite quebra de linha se necessário */
+    gap: 10px; /* Espaçamento entre os inputs */
+}
+
+.sinais-vitais-form {
+    display: grid; /* Muda para grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Define 2 colunas de largura igual */
+    gap: 5px; /* Espaçamento entre as células do grid */
+}
+
+.sinais-vitais-form label {
+    grid-column: span 1; /* Cada label ocupa uma coluna */
+}
+
+.sv {
+    width: 80px; /* Largura reduzida para os inputs */
+    padding: 8px; /* Padding para conforto */
+}
+
+input[type="text"],
+input[type="number"] {
+    flex: 1; /* Permite que os inputs ocupem o espaço disponível */
+    min-width: 150px; /* Largura mínima */
+    padding: 8px; /* Padding para conforto */
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #0baad1; /* Mudar a cor do border no foco */
+}
+
+
+
+button:hover {
+    background-color: #0a8db0; /* Cor mais escura no hover */
+}
+
+.cadastro-enviar {
+    margin-top: 10px;
+}
+
+.sinais-vitais {
+    display: flex;
+    flex-direction: column;
+}
+
+.controles {
+    display: flex;
+    justify-content: space-between; /* Alinhamento dos botões de controle */
+    margin-top: 10px;
+}
+
+button.soma10,
+button.soma1,
+button.menos1,
+button.menos10 {
+    flex: 1; /* Botões iguais */
+    margin: 0 5px; /* Margem entre botões */
+
+}
+
+.fieldset-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    grid-template-rows: repeat(2, auto); /* 2 linhas */
+    gap: 10px; /* Espaçamento entre os itens */
+    padding: 20px; /* Padding dentro do fieldset */
+    border: 1px solid #ccc; /* Borda do fieldset */
+    border-radius: 8px; /* Cantos arredondados */
+}

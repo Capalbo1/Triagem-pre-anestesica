@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Avaliação Pré Anestésica</title>
+</head>
+<body>
+    <header>
+        <h1>Triagem Pré Anestésica</h1>
+        <img src="assets/img/logosantacasa.png" alt="Logo Santa Casa">
+    </header>
+
+    <main>
+        <section class="cadastro-paciente">
+            <h2>Cadastro do Paciente</h2>
+            <form class="cadastro" action="get">
+                <div>
+                    <label for="nome">Nome:</label>
+                    <input type="text" name="nome" id="nome" required>
+                </div>
+                <div>
+                    <label for="idade">Idade:</label>
+                    <input type="number" name="idade" id="idade" required>
+                </div>
+                <fieldset>
+                    <legend>Sexo:</legend>
+                    <label>
+                        <input type="radio" name="sexo" value="masculino" required>
+                        Masculino
+                    </label>
+                    <label>
+                        <input type="radio" name="sexo" value="feminino">
+                        Feminino
+                    </label>
+                </fieldset>
+            </form>
+            <h2>Sinais Vitais</h2>
+            <form class="sinais-vitais-form" action="get">
+                <label for="fc">FC (BPM):</label>
+                <input type="number" class="sv" name="fc" id="fc" required placeholder="80">
+
+                <label for="fr">FR (irpm):</label>
+                <input type="number" class="sv" name="fr" id="fr" required placeholder="80">
+
+                <label for="pas">PAS (mmHg):</label>
+                <input type="number" class="sv" name="pas" id="pas" required placeholder="12">
+
+                <label for="pad">PAD (mmHg):</label>
+                <input type="number" class="sv" name="pad" id="pad" required placeholder="8">
+
+                <label for="glicemia">Glicemia (mg/dl):</label>
+                <input type="number" class="sv" name="glicemia" id="glicemia" required placeholder="100">
+
+
+                <label for="Temperatura"> Temp(C°):</label>
+                <input type="number" class="sv" id="temp" placeholder="38.5" required>
+
+        </form>
+        <h2>Porte cirúrgico</h2>
+        <fieldset class="fieldset-grid">
+            <legend>Escolha uma opção:</legend>
+            
+            <label>
+                <input type="radio" name="opcao" value="opcao1" required>
+                 Baixo Risco
+            </label>
+    
+            <label>
+                <input type="radio" name="opcao" value="opcao2">
+                Alto Risco Cardíaca ou Torácica
+            </label>
+    
+            <label>
+                <input type="radio" name="opcao" value="opcao3">
+                Alto Risco Cardíaca ou Torácica
+            </label>
+            <label>
+                <input type="radio" name="opcao" value="opcao1" required>
+                Alto Risco Cardíaca ou Torácica
+            </label>
+    
+            <label>
+                <input type="radio" name="opcao" value="opcao2">
+                Alto Risco Cardíaca ou Torácica
+            </label>
+    
+            <label>
+                <input type="radio" name="opcao" value="opcao3">
+                Alto Risco Cardíaca ou Torácica
+            </label>
+            <label>
+                <input type="radio" name="opcao" value="opcao3">
+                Alto Risco Cardíaca ou Torácica
+            </label>
+        </fieldset>
+        </section>
+        
+
+        <section class="sinais-vitais">
+            
+            
+        </section>
+    </main>
+</body>
+</html>
