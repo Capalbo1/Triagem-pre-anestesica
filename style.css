@@ -223,4 +223,7 @@ main {
     main{
         padding: 3px;
     }
+    .fieldset-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
