@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -8,33 +8,40 @@ body {
 header {
     background-color: #0baad1;
     color: white;
-    height: 20vh;
+    display: flex;
+    justify-content: space-around;
+    
+}
+  
+header img {
+    width: 10%;
+    height: auto;
+}
+h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5em;
+    color: #ffffff;
     text-align: center;
-    position: relative;
+    letter-spacing: 2px; /* espaçamento entre letras */
+    text-transform: uppercase; /* transforma o texto em maiúsculas */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* sombra leve */
 }
 
-header img {
-    width: 15%;
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translateX(-50%);
-}
 
 main {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    height: 130vh;
+    justify-content: space-between;
+    min-height: 73vh;
     padding: 20px;
 }
-
 section {
+
     background-color: #ffffff;
-    padding: 20px;
+    padding: 10px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 45%;
+    width: 50%;
     transition: transform 0.2s;
 }
 
@@ -45,42 +52,49 @@ section:hover {
 h2 {
     margin-top: 0;
     color: #0baad1;
+    font-size: 1.2em; /* Tamanho reduzido do título */
 }
 
 label {
     display: block;
-    margin: 10px 0 5px;
-    font-size: 0.9em;
+    margin: 8px 0 4px;
+    font-size: 0.85em; /* Fonte menor para labels */
 }
 
 .cadastro {
     display: flex;
-    flex-direction: row; /* Define a direção como linha */
-    flex-wrap: wrap; /* Permite quebra de linha se necessário */
-    gap: 10px; /* Espaçamento entre os inputs */
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px; /* Espaçamento menor entre os inputs */
+}
+
+.sinais-porte{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 }
 
 .sinais-vitais-form {
-    display: grid; /* Muda para grid layout */
-    grid-template-columns: repeat(2, 1fr); /* Define 2 colunas de largura igual */
-    gap: 5px; /* Espaçamento entre as células do grid */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
 }
 
 .sinais-vitais-form label {
-    grid-column: span 1; /* Cada label ocupa uma coluna */
+    grid-column: span 1;
 }
 
 .sv {
-    width: 80px; /* Largura reduzida para os inputs */
-    padding: 8px; /* Padding para conforto */
+    width: 70px; /* Largura menor para os inputs */
+    padding: 6px; /* Menos padding */
 }
 
 input[type="text"],
 input[type="number"] {
-    flex: 1; /* Permite que os inputs ocupem o espaço disponível */
-    min-width: 150px; /* Largura mínima */
-    padding: 8px; /* Padding para conforto */
-    margin-bottom: 10px;
+    flex: 1;
+    min-width: 50%;
+    padding: 6px; /* Menor padding para inputs */
+    margin-bottom: 8px; /* Menor margem */
     border: 1px solid #ccc;
     border-radius: 4px;
     transition: border-color 0.2s;
@@ -88,13 +102,21 @@ input[type="number"] {
 
 input[type="text"]:focus,
 input[type="number"]:focus {
-    border-color: #0baad1; /* Mudar a cor do border no foco */
+    border-color: #0baad1;
 }
 
-
+button {
+    padding: 10px 15px; /* Adicione padding aos botões */
+    border: none;
+    border-radius: 4px;
+    color: white;
+    background-color: #0baad1;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
 
 button:hover {
-    background-color: #0a8db0; /* Cor mais escura no hover */
+    background-color: #0a8db0; /* Muda a cor ao passar o mouse */
 }
 
 .cadastro-enviar {
@@ -108,7 +130,7 @@ button:hover {
 
 .controles {
     display: flex;
-    justify-content: space-between; /* Alinhamento dos botões de controle */
+    justify-content: space-between;
     margin-top: 10px;
 }
 
@@ -116,17 +138,89 @@ button.soma10,
 button.soma1,
 button.menos1,
 button.menos10 {
-    flex: 1; /* Botões iguais */
-    margin: 0 5px; /* Margem entre botões */
+    flex: 1;
+    margin: 0 4px; /* Menor margem entre botões */
+}
 
+
+
+
+fieldset {
+    padding: 10px; /* Menor padding para reduzir o tamanho do fieldset */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 0.9em; /* Reduz o tamanho da fonte dentro do fieldset */
+    width: auto;
+    margin-top: 0;
 }
 
 .fieldset-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
-    grid-template-rows: repeat(2, auto); /* 2 linhas */
-    gap: 10px; /* Espaçamento entre os itens */
-    padding: 20px; /* Padding dentro do fieldset */
-    border: 1px solid #ccc; /* Borda do fieldset */
-    border-radius: 8px; /* Cantos arredondados */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 10px;
+    padding: 10px; /* Menor padding para o grid */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 90%;
+}
+
+div.porte{
+    width: 50%;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6vh;
+    background-color: #0baad1;
+}
+.footer {
+    margin: 2px 5px;
+    background-color: rgb(13, 218, 47);
+    color: black;
+}
+main {
+    display: flex;
+    flex-direction: row; /* Padrão para telas grandes */
+}
+
+@media (max-width: 1000px) {
+    main {
+        flex-direction: column; /* Altera para coluna em telas menores */
+    }
+
+    section {
+        width: 100%;
+    }
+
+}
+@media (max-width: 470px) {
+    main {
+        flex-direction: column; /* Altera para coluna em telas menores */
+    }
+    header{
+        flex-direction: column;
+        justify-content: center;
+    }
+    header img{
+        width:70%;
+        height: auto;
+
+    }
+
+
+
+    
+}
+
+@media (max-width: 510px){
+    .sinais-porte{
+        flex-direction: column;
+    }
+
+    main{
+        padding: 3px;
+    }
 }

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/img/icon.png" type="image/x-icon">
     <title>Avaliação Pré Anestésica</title>
 </head>
 <body>
@@ -36,72 +37,164 @@
                     </label>
                 </fieldset>
             </form>
-            <h2>Sinais Vitais</h2>
-            <form class="sinais-vitais-form" action="get">
-                <label for="fc">FC (BPM):</label>
-                <input type="number" class="sv" name="fc" id="fc" required placeholder="80">
-
-                <label for="fr">FR (irpm):</label>
-                <input type="number" class="sv" name="fr" id="fr" required placeholder="80">
-
-                <label for="pas">PAS (mmHg):</label>
-                <input type="number" class="sv" name="pas" id="pas" required placeholder="12">
-
-                <label for="pad">PAD (mmHg):</label>
-                <input type="number" class="sv" name="pad" id="pad" required placeholder="8">
-
-                <label for="glicemia">Glicemia (mg/dl):</label>
-                <input type="number" class="sv" name="glicemia" id="glicemia" required placeholder="100">
-
-
-                <label for="Temperatura"> Temp(C°):</label>
-                <input type="number" class="sv" id="temp" placeholder="38.5" required>
-
-        </form>
-        <h2>Porte cirúrgico</h2>
-        <fieldset class="fieldset-grid">
-            <legend>Escolha uma opção:</legend>
+        <div class="sinais-porte">
             
-            <label>
-                <input type="radio" name="opcao" value="opcao1" required>
-                 Baixo Risco
-            </label>
-    
-            <label>
-                <input type="radio" name="opcao" value="opcao2">
-                Alto Risco Cardíaca ou Torácica
-            </label>
-    
-            <label>
-                <input type="radio" name="opcao" value="opcao3">
-                Alto Risco Cardíaca ou Torácica
-            </label>
-            <label>
-                <input type="radio" name="opcao" value="opcao1" required>
-                Alto Risco Cardíaca ou Torácica
-            </label>
-    
-            <label>
-                <input type="radio" name="opcao" value="opcao2">
-                Alto Risco Cardíaca ou Torácica
-            </label>
-    
-            <label>
-                <input type="radio" name="opcao" value="opcao3">
-                Alto Risco Cardíaca ou Torácica
-            </label>
-            <label>
-                <input type="radio" name="opcao" value="opcao3">
-                Alto Risco Cardíaca ou Torácica
-            </label>
-        </fieldset>
-        </section>
+               <div class="sinais">
+                <h2>Sinais Vitais</h2>
+                    <form class="sinais-vitais-form" action="get">
+                         
+                        <label for="fc">FC (BPM):</label>
+                        <input type="number" class="sv" name="fc" id="fc" required placeholder="80">
+                        <label for="fr">FR (irpm):</label>
+                        <input type="number" class="sv" name="fr" id="fr" required placeholder="80">
+                        <label for="pas">PAS (mmHg):</label>
+                        <input type="number" class="sv" name="pas" id="pas" required placeholder="12">
+                        <label for="pad">PAD (mmHg):</label>
+                        <input type="number" class="sv" name="pad" id="pad" required placeholder="8">
+                        <label for="glicemia">Glicemia (mg/dl):</label>
+                        <input type="number" class="sv" name="glicemia" id="glicemia" required placeholder="100">
+                        <label for="temp">Temp (C°):</label> <!-- Corrigido -->
+                        <input type="number" class="sv" name="temp" id="temp" placeholder="38.5" required> <!-- Adicionado name -->
+                    </form>
+               </div>
+                
+                <div class="porte">
+                    <h2>Porte cirúrgico</h2>
+                    <fieldset class="fieldset-grid"> 
+                        <legend>Escolha uma opção:</legend>
+                        <label>
+                            <input type="radio" name="opcao" value="opcao1" required>
+                            Alto Risco Cardíaca ou Torácica
+                        </label>
+                        <label>
+                            <input type="radio" name="opcao" value="opcao2">
+                            Alto Risco Vascular
+                        </label>
+                        <label>
+                            <input type="radio" name="opcao" value="opcao3">
+                            Alto Risco Abdominal de grande porte
+                        </label>
+                        <label>
+                            <input type="radio" name="opcao" value="opcao4" required> <!-- Corrigido o valor -->
+                            Alto Risco de Sangramento
+                        </label>
+                        <label>
+                            <input type="radio" name="opcao" value="opcao5">
+                            Alto Risco Intracraniana
+                        </label>
+                        <label>
+                            <input type="radio" name="opcao" value="opcao6">
+                            Alto Risco Ortopédica de grande porte
+                        </label>
+                        <label>
+                            <input type="radio" name="opcao" value="opcao7">
+                            Baixo Risco
+                        </label>
+                    </fieldset>
+                </div>
         
+        </div>
+        </section>
 
         <section class="sinais-vitais">
-            
-            
+            <h2>Riscos</h2>
+                <form class="fieldset-grid">
+                    <fieldset>
+                        <legend>Cardiopatia</legend>
+                        <label>
+                            <input type="checkbox" name="doenças" value="cardiopatia-isquemica"> Cardiopatia isquêmica
+                        </label>
+                        <label>
+                            <input type="checkbox" name="doenças" value="insuficiencia-cardiaca"> Insuficiência Cardíaca
+                        </label>
+                        <label>
+                            <input type="checkbox" name="doenças" value="hipertensao-arterial-isquemica"> Hipertensão arterial isquêmica
+                        </label>
+                        <label>
+                            <input type="checkbox" name="doenças" value="fibrilacao-atrial-cronica"> Fibrilação Atrial Crônica
+                        </label>
+                        <label>
+                            <input type="checkbox" name="doenças" value="doença-arterial-periferica"> Doença arterial periférica
+                        </label>
+                        <label>
+                            <input type="checkbox" name="doenças" value="valvulopatias"> Valvulopatias
+                        </label>
+                        <label>
+                            <input type="checkbox" name="doenças" value="outras-arritmias"> Outras Arritmias
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Endocrinopatias</legend>
+                        <label>
+                            <input type="checkbox" name="doenças" value="diabete-mellitus"> Diabete Mellitus
+                        </label>
+                        <label>
+                            <input type="checkbox" name="doenças" value="hipertireoidismo"> Hipertireoidismo
+                        </label>
+                        <label>
+                            <input type="checkbox" name="doenças" value="hipotireoidismo"> Hipotireoidismo
+                        </label>
+                        <label>
+                            <input type="checkbox" name="doenças" value="doenca-de-cushing"> Doença de Cushing
+                        </label>
+                        <label>
+                            <input type="checkbox" name="doenças" value="doenca-de-addison"> Doença de Addison
+                        </label>
+                        <label>
+                            <input type="checkbox" name="doenças" value="hipoparatireoidismo"> Hipoparatireoidismo
+                        </label>
+                        <label>
+                            <input type="checkbox" name="doenças" value="hiperparatireoidismo"> Hiperparatireoidismo
+                        </label>
+                        <label>
+                            <input type="checkbox" name="doenças" value="obesidade-morbida"> Obesidade Mórbida
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Doenças Neurologicas</legend>
+                        
+                        <label>
+                            <input type="checkbox" name="doenças" value="avc"> AVC
+                        </label>
+                        <label>
+                            <input type="checkbox" name="doenças" value="epilepsia"> Epilepsia
+                        </label>
+                        <label>
+                            <input type="checkbox" name="doenças" value="neoplasia"> Neoplasia
+                        </label>
+                        <label>
+                            <input type="checkbox" name="doenças" value="demencia"> Demência
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Doenças Hepáticas</legend>
+                        <label>
+                            <input type="checkbox" name="doenças" value="hepatite-infecciosa"> Hepatite Infecciosa
+                        </label>
+                        <label>
+                            <input type="checkbox" name="doenças" value="hepatite-alcoolica"> Hepatite Alcoólica
+                        </label>
+                        <label>
+                            <input type="checkbox" name="doenças" value="acometimento-neoplasico"> Acometimento Neoplásico
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Doenças pulmonares</legend>
+                        <label>
+                            <input type="checkbox" name="doenças" value="asma"> Asma
+                        </label>
+                        <label>
+                            <input type="checkbox" name="doenças" value="dpoc"> DPOC
+                        </label>
+                        
+                    </fieldset>
+                </form>
+            </div>
         </section>
     </main>
+    <footer>
+        <button type="submit" class="footer">Enviar</button>
+        <button type="reset" class="footer">Apagar informações</button>
+    </footer>
 </body>
 </html>
