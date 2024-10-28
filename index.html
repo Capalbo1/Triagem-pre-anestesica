@@ -16,7 +16,7 @@
     <main>
         <section class="cadastro-paciente">
             <h2>Cadastro do Paciente</h2>
-            <form class="cadastro" action="get">
+            <form class="cadastro" action="get" id="cadastro">
                 <div>
                     <label for="nome">Nome:</label>
                     <input type="text" name="nome" id="nome" required>
@@ -193,9 +193,15 @@
         </section>
     </main>
     <footer>
-        <button type="submit" class="footer">Enviar</button>
+        <button id="enviar" type="submit" class="footer">Enviar</button>
         <button type="reset" class="footer">Apagar informações</button>
     </footer>
 </body>
 <script src="script.js"></script>
+<div id="alerta" style="display: none;">
+    <div class="conteudo-alerta">
+        <span id="resultado"></span>
+        <button onclick="fecharAlerta()">Fechar</button>
+    </div>
+</div>
 </html>
