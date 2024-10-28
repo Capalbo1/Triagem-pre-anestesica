@@ -27,11 +27,15 @@ function imprimirPDF() {
 
        // Adicione a logo no canto superior direito (substitua 'logo_url' pela URL da sua logo em base64 ou caminho local)
        const logoUrl = './assets/img/logosantacasa.png'; // Exemplo: 'data:image/png;base64,iVBORw0...'
-       doc.addImage(logoUrl, 'PNG', 2, 5, 40, 20);
+       doc.addImage(logoUrl, 'PNG', 15, 5, 40, 20);
    
        // Configurações para o cabeçalho
-       doc.setFontSize(18);
+       doc.setFontSize(16);
        doc.text("Santa Casa de Misericórdia de Tatuí", 105, 7, null, null, "center");
+        doc.setFont("bold");
+       doc.setFontSize(11);
+       doc.text("Rua: Rua Maneco Pereira, 299 - Centro - Tatuí", 105,12,null,null,"center");
+       doc.setFontSize(16);
         doc.setFont("bold");
        doc.text("Dados do Paciente" , 105 , 40 , null , null , "center");
        // Configurações para centralizar o conteúdo
@@ -52,7 +56,7 @@ function imprimirPDF() {
            "Exame de Urina",
            "Raio-X de Tórax"
        ];
-       doc.setFontSize(18);
+       doc.setFontSize(16);
        doc.setFont("bold");
        doc.text("Exames Solicitados:", 105, 90, null, null, "center");
        doc.setFontSize(12);
@@ -62,8 +66,8 @@ function imprimirPDF() {
        });
    
        // Espaço para assinatura
-       doc.text("________________________________", 105, 170, null, null, "center");
-       doc.text("Assinatura do Solicitante", 105, 180, null, null, "center");
+       doc.text("________________________________", 105, 280, null, null, "center");
+       doc.text("Assinatura do Solicitante", 105, 290, null, null, "center");
    
        doc.save("solicitacao_exames.pdf");
    }
