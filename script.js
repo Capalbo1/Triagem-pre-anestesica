@@ -27,18 +27,20 @@ function imprimirPDF() {
 
        // Adicione a logo no canto superior direito (substitua 'logo_url' pela URL da sua logo em base64 ou caminho local)
        const logoUrl = './assets/img/logosantacasa.png'; // Exemplo: 'data:image/png;base64,iVBORw0...'
-       doc.addImage(logoUrl, 'PNG', 150, 10, 40, 20);
+       doc.addImage(logoUrl, 'PNG', 2, 5, 40, 20);
    
        // Configurações para o cabeçalho
        doc.setFontSize(18);
-       doc.text("Santa Casa de Misericórdia de Tatuí", 105, 30, null, null, "center");
-   
+       doc.text("Santa Casa de Misericórdia de Tatuí", 105, 7, null, null, "center");
+        doc.setFont("bold");
+       doc.text("Dados do Paciente" , 105 , 40 , null , null , "center");
        // Configurações para centralizar o conteúdo
        doc.setFontSize(12);
-       doc.text(`Nome do Paciente: ${document.getElementById("nome").value}`, 105, 50, null, null, "center");
-       doc.text(`Idade: ${document.getElementById("idade").value}`, 105, 60, null, null, "center");
-       doc.text(`Sexo: ${document.querySelector('input[name="sexo"]:checked')?.value || "Não informado"}`, 105, 70, null, null, "center");
-       doc.text(`Data da Solicitação: ${new Date().toLocaleDateString()}`, 105, 80, null, null, "center");
+       doc.setFont("normal");
+       doc.text(`Nome do Paciente: ${document.getElementById("nome").value}`, 15, 50, null, null, "left");
+       doc.text(`Idade: ${document.getElementById("idade").value}`, 15, 60, null, null, "left");
+       doc.text(`Sexo: ${document.querySelector('input[name="sexo"]:checked')?.value || "Não informado"}`, 15, 70, null, null, "left");
+       doc.text(`Data da Solicitação: ${new Date().toLocaleDateString()}`, 15, 80, null, null, "left");
    
        // Lista de exames
        const exames = [
@@ -50,10 +52,13 @@ function imprimirPDF() {
            "Exame de Urina",
            "Raio-X de Tórax"
        ];
-   
+       doc.setFontSize(18);
+       doc.setFont("bold");
        doc.text("Exames Solicitados:", 105, 90, null, null, "center");
+       doc.setFontSize(12);
+       doc.setFont("normal");
        exames.forEach((exame, index) => {
-           doc.text(`- ${exame}`, 105, 100 + (index * 10), null, null, "center");
+           doc.text(`- ${exame}`, 15, 100 + (index * 10), null, null, "left");
        });
    
        // Espaço para assinatura
