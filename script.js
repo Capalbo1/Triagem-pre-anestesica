@@ -44,7 +44,11 @@ function imprimirPDF() {
        doc.text(`Nome do Paciente: ${document.getElementById("nome").value}`, 15, 50, null, null, "left");
        doc.text(`Idade: ${document.getElementById("idade").value}`, 15, 60, null, null, "left");
        doc.text(`Sexo: ${document.querySelector('input[name="sexo"]:checked')?.value || "Não informado"}`, 15, 70, null, null, "left");
-       doc.text(`Data da Solicitação: ${new Date().toLocaleDateString()}`, 15, 80, null, null, "left");
+       const dataAtual = new Date();
+        const dataFormatada = dataAtual.toLocaleDateString();
+        const horaFormatada = dataAtual.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+        doc.text(`Data e Hora da Solicitação: ${dataFormatada} ${horaFormatada}`, 15, 80, null, null, "left");
    
        // Lista de exames
        const exames = [

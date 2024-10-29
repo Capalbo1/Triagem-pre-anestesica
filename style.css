@@ -19,7 +19,7 @@ header img {
 }
 h1 {
     font-family: 'Arial', sans-serif;
-    font-size: 1.5em;
+    font-size: 1.3em;
     color: #ffffff;
     text-align: center;
     letter-spacing: 2px; /* espaçamento entre letras */
@@ -32,8 +32,8 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    min-height: 73vh;
-    padding: 20px;
+    min-height: 70vh;
+    padding: 10px;
 }
 section {
 
@@ -134,17 +134,6 @@ button:hover {
     margin-top: 10px;
 }
 
-button.soma10,
-button.soma1,
-button.menos1,
-button.menos10 {
-    flex: 1;
-    margin: 0 4px; /* Menor margem entre botões */
-}
-
-
-
-
 fieldset {
     padding: 10px; /* Menor padding para reduzir o tamanho do fieldset */
     border: 1px solid #ccc;
@@ -176,7 +165,12 @@ footer{
     height: 6vh;
     background-color: #0baad1;
 }
-.footer {
+#enviar {
+    margin: 2px 5px;
+    background-color: rgb(7, 126, 27);
+    color: black;
+}
+#reset {
     margin: 2px 5px;
     background-color: rgb(13, 218, 47);
     color: black;
