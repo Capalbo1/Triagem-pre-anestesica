@@ -19,6 +19,9 @@ function imprimirPDF() {
     if (idade < 45 && sexo === "feminino") {
         exames.push({ nome: "Beta HCG", tipo: "Laboratorial" });
     }
+    if (idade > 44 && sexo === "masculino") {
+        exames.push({ nome: "ECG", tipo: "Imagem" });
+    }
 
     // Captura a opção selecionada
     const opcaoSelecionada = document.querySelector('input[name="opcao"]:checked')?.value;
@@ -26,7 +29,7 @@ function imprimirPDF() {
     // Lógica para adicionar exames com base na opção selecionada
     if (opcaoSelecionada === "opcao1") {
         exames.push(
-            { nome: "ECG", tipo: "Laboratorial" },
+            { nome: "ECG", tipo: "Imagem" },
             { nome: "HMG", tipo: "Laboratorial" },
             { nome: "Eletrolitos", tipo: "Laboratorial" },
             { nome: "Glicemia", tipo: "Laboratorial" },
@@ -37,6 +40,74 @@ function imprimirPDF() {
             { nome: "Ecocardiograma", tipo: "Imagem" }
         );
     }
+    if (opcaoSelecionada === "opcao2") {
+        exames.push(
+            { nome: "ECG", tipo: "Imagem" },
+            { nome: "HMG", tipo: "Laboratorial" },
+            { nome: "Eletrolitos", tipo: "Laboratorial" },
+            { nome: "Glicemia", tipo: "Laboratorial" },
+            { nome: "Coágulo", tipo: "Laboratorial" },
+            { nome: "Ureia", tipo: "Laboratorial" },
+            { nome: "Creatinina", tipo: "Laboratorial" }
+        );
+    }
+    if (opcaoSelecionada === "opcao3") {
+        exames.push(
+            { nome: "HMG", tipo: "Laboratorial" },
+            { nome: "Eletrolitos", tipo: "Laboratorial" },
+            { nome: "Glicemia", tipo: "Laboratorial" },
+            { nome: "TGO", tipo: "Laboratorial" },
+            { nome: "TGP", tipo: "Laboratorial" },
+            { nome: "Fosfatase alcalina", tipo: "Laboratorial" },
+            { nome: "Gama-GT", tipo: "Laboratorial" },
+            { nome: "Coágulo", tipo: "Laboratorial" },
+            { nome: "Raio X", tipo: "Imagem" },
+            { nome: "Ureia", tipo: "Laboratorial" },
+            { nome: "Creatinina", tipo: "Laboratorial" }
+        );
+    }
+    if (opcaoSelecionada === "opcao4") {
+        exames.push(
+            { nome: "HMG", tipo: "Laboratorial" },
+            { nome: "Eletrolitos", tipo: "Laboratorial" },
+            { nome: "Glicemia", tipo: "Laboratorial" },
+            { nome: "TGO", tipo: "Laboratorial" },
+            { nome: "TGP", tipo: "Laboratorial" },
+            { nome: "Fosfatase alcalina", tipo: "Laboratorial" },
+            { nome: "Gama-GT", tipo: "Laboratorial" },
+            { nome: "Coágulo", tipo: "Laboratorial" },
+            { nome: "Raio X", tipo: "Imagem" },
+            { nome: "Ureia", tipo: "Laboratorial" },
+            { nome: "Creatinina", tipo: "Laboratorial" }
+        );
+    }
+    if (opcaoSelecionada === "opcao5") {
+        exames.push(
+            { nome: "HMG", tipo: "Laboratorial" },
+            { nome: "Eletrolitos", tipo: "Laboratorial" },
+            { nome: "Glicemia", tipo: "Laboratorial" },
+            { nome: "Coágulo", tipo: "Laboratorial" },
+            { nome: "Ureia", tipo: "Laboratorial" },
+            { nome: "Creatinina", tipo: "Laboratorial" }
+        );
+    }
+    if (opcaoSelecionada === "opcao6") {
+        exames.push(
+            { nome: "HMG", tipo: "Laboratorial" },
+            { nome: "Eletrolitos", tipo: "Laboratorial" },
+            { nome: "Glicemia", tipo: "Laboratorial" },
+            { nome: "Coágulo", tipo: "Laboratorial" },
+            { nome: "Raio X", tipo: "Imagem" },
+            { nome: "Ureia", tipo: "Laboratorial" },
+            { nome: "Creatinina", tipo: "Laboratorial" },
+            { nome: "Lactato", tipo: "Laboratorial" }
+        );
+    }
+    if (opcaoSelecionada === "opcao7") {
+        exames.push(
+        );
+    }
+ 
     // Adicione mais verificações aqui para outras opções, se necessário
 
     // Adiciona logo
