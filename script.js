@@ -11,6 +11,7 @@ function imprimirPDF() {
     const nome = document.getElementById("nome").value;
     const idade = parseInt(document.getElementById("idade").value, 10);
     const sexo = document.querySelector('input[name="sexo"]:checked')?.value || "Não informado";
+   // const frequenciaCardiaca = document.getElementById("fc").value;
 
     // Lista de exames
     const exames = [];
@@ -21,6 +22,33 @@ function imprimirPDF() {
     }
     if (idade > 44 && sexo === "masculino") {
         exames.push({ nome: "ECG", tipo: "Imagem" });
+    }
+    if (idade > 54 ) {
+        exames.push(
+            { nome: "ECG", tipo: "Imagem" },
+            { nome: "HMG", tipo: "Laboratorial" }
+            
+        );
+    }
+    if (idade > 69 ) {
+        exames.push(
+            { nome: "ECG", tipo: "Imagem" },
+            { nome: "HMG", tipo: "Laboratorial" },
+            { nome: "Eletrólitos", tipo: "Laboratorial" },
+            { nome: "Glicemia", tipo: "Imagem" },
+
+            
+        );
+    }
+    if (idade > 74 ) {
+        exames.push(
+            { nome: "ECG", tipo: "Imagem" },
+            { nome: "HMG", tipo: "Laboratorial" },
+            { nome: "Eletrólitos", tipo: "Laboratorial" },
+            { nome: "Glicemia", tipo: "Imagem" },
+            { nome: "Albumina", tipo: "Laboratorial" }
+            
+        );
     }
 
     // Captura a opção selecionada
@@ -107,6 +135,8 @@ function imprimirPDF() {
         exames.push(
         );
     }
+
+    
  
     // Adicione mais verificações aqui para outras opções, se necessário
 
