@@ -227,6 +227,59 @@ function imprimirPDF() {
             { nome: "HMG", tipo: "Laboratorial" },
         );
     }
+    if ( doençaSelecionada === "doeca-renal") {
+        exames.push(
+            { nome: "HMG", tipo: "Laboratorial" },
+            { nome: "Eletrólitos", tipo: "Lsboratorial" },
+            { nome: "Creatina", tipo: "Laboratorial" },
+        );
+    }
+    if ( doençaSelecionada === "doenca-hematologica") {
+        exames.push(
+            { nome: "HMG", tipo: "Laboratorial" },
+        );
+    }
+    if ( doençaSelecionada === "Coagulopatia") {
+        exames.push(
+            { nome: "HMG", tipo: "Laboratorial" },
+        );
+    }
+    if ( doençaSelecionada === "Disturbio-disabsortivo-desnutrição") {
+        exames.push(
+            { nome: "HMG", tipo: "Laboratorial" },
+            { nome: "ECG", tipo: "Imagem" },
+            { nome: "Eletrólitos", tipo: "Laboratorial" },
+            { nome: "Creatina", tipo: "Laboratorial" },
+            { nome: "Glicemia", tipo: "Laboratorial" },
+            { nome: "Albumina", tipo: "Laboratorial" },
+        );
+    }
+    if ( doençaSelecionada === "anticoagulantes") {
+        exames.push(
+            { nome: "HMG", tipo: "Laboratorial" },
+            { nome: "Coagulograma", tipo: "Laboratorial" },
+            { nome: "Cálcio", tipo: "Laboratorial" },
+        );
+    }
+    if ( doençaSelecionada === "Diuréticos") {
+        exames.push(
+            { nome: "Eletrólitos", tipo: "Laboratorial" },
+            { nome: "Creatina", tipo: "Laboratorial" },
+        );
+    }
+    if ( doençaSelecionada === "Corticosteróides") {
+        exames.push(
+            { nome: "HMG", tipo: "Laboratorial" },
+            { nome: "Glicemia", tipo: "Laboratorial" },
+        );
+    }
+    if ( doençaSelecionada === "quimioterápicos") {
+        exames.push(
+            { nome: "HMG", tipo: "Laboratorial" },
+            { nome: "Creatina", tipo: "Laboratorial" },
+        );
+    }
+    
 
     // Captura a opção selecionada
     const opcaoSelecionada = document.querySelector('input[name="opcao"]:checked')?.value;
