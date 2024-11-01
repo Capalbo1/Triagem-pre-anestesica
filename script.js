@@ -60,7 +60,7 @@ function imprimirPDF() {
         exames.push(
             { nome: "ECG", tipo: "Imagem" },
             { nome: "HMG", tipo: "Laboratorial" },
-            { nome: "Eletrolitos", tipo: "Laboratorial" },
+            { nome: "Eletrólitos", tipo: "Laboratorial" },
         );
     }
     // Captura a opção selecionada
@@ -84,7 +84,7 @@ function imprimirPDF() {
         exames.push(
             { nome: "ECG", tipo: "Imagem" },
             { nome: "HMG", tipo: "Laboratorial" },
-            { nome: "Eletrolitos", tipo: "Laboratorial" },
+            { nome: "Eletrólitos", tipo: "Laboratorial" },
             { nome: "Glicemia", tipo: "Laboratorial" },
             { nome: "Coágulo", tipo: "Laboratorial" },
             { nome: "Ureia", tipo: "Laboratorial" },
@@ -94,7 +94,7 @@ function imprimirPDF() {
     if (opcaoSelecionada === "opcao3") {
         exames.push(
             { nome: "HMG", tipo: "Laboratorial" },
-            { nome: "Eletrolitos", tipo: "Laboratorial" },
+            { nome: "Eletrólitos", tipo: "Laboratorial" },
             { nome: "Glicemia", tipo: "Laboratorial" },
             { nome: "TGO", tipo: "Laboratorial" },
             { nome: "TGP", tipo: "Laboratorial" },
@@ -109,7 +109,7 @@ function imprimirPDF() {
     if (opcaoSelecionada === "opcao4") {
         exames.push(
             { nome: "HMG", tipo: "Laboratorial" },
-            { nome: "Eletrolitos", tipo: "Laboratorial" },
+            { nome: "Eletrólitos", tipo: "Laboratorial" },
             { nome: "Glicemia", tipo: "Laboratorial" },
             { nome: "TGO", tipo: "Laboratorial" },
             { nome: "TGP", tipo: "Laboratorial" },
@@ -124,7 +124,7 @@ function imprimirPDF() {
     if (opcaoSelecionada === "opcao5") {
         exames.push(
             { nome: "HMG", tipo: "Laboratorial" },
-            { nome: "Eletrolitos", tipo: "Laboratorial" },
+            { nome: "Eletrólitos", tipo: "Laboratorial" },
             { nome: "Glicemia", tipo: "Laboratorial" },
             { nome: "Coágulo", tipo: "Laboratorial" },
             { nome: "Ureia", tipo: "Laboratorial" },
@@ -134,7 +134,7 @@ function imprimirPDF() {
     if (opcaoSelecionada === "opcao6") {
         exames.push(
             { nome: "HMG", tipo: "Laboratorial" },
-            { nome: "Eletrolitos", tipo: "Laboratorial" },
+            { nome: "Eletrólitos", tipo: "Laboratorial" },
             { nome: "Glicemia", tipo: "Laboratorial" },
             { nome: "Coágulo", tipo: "Laboratorial" },
             { nome: "Raio X", tipo: "Imagem" },
