@@ -1,6 +1,7 @@
 document.getElementById("enviar").addEventListener("click", function(event) {
     event.preventDefault(); // Evita o envio padrão do formulário
     imprimirPDF(); // Chama a função para gerar o PDF com os dados preenchidos
+    
 });
 
 function imprimirPDF() {
@@ -14,7 +15,7 @@ function imprimirPDF() {
    // const frequenciaCardiaca = document.getElementById("fc").value;
 
     // Lista de exames
-    const exames = [];
+    let exames = [];
 
     // Verificação para adicionar exame "Beta HCG"
     if (idade < 45 && sexo === "feminino") {
@@ -52,6 +53,17 @@ function imprimirPDF() {
     }
 
     // Captura a opção selecionada
+    const doençaSelecionada = document.querySelector('input[name="doenças"]:checked')?.value;
+
+    // Lógica para adicionar exames com base na opção selecionada
+    if ( doençaSelecionada === "cardiopatia-isquemica") {
+        exames.push(
+            { nome: "ECG", tipo: "Imagem" },
+            { nome: "HMG", tipo: "Laboratorial" },
+            { nome: "Eletrolitos", tipo: "Laboratorial" },
+        );
+    }
+    // Captura a opção selecionada
     const opcaoSelecionada = document.querySelector('input[name="opcao"]:checked')?.value;
 
     // Lógica para adicionar exames com base na opção selecionada
@@ -59,7 +71,7 @@ function imprimirPDF() {
         exames.push(
             { nome: "ECG", tipo: "Imagem" },
             { nome: "HMG", tipo: "Laboratorial" },
-            { nome: "Eletrolitos", tipo: "Laboratorial" },
+            { nome: "Eletrólitos", tipo: "Laboratorial" },
             { nome: "Glicemia", tipo: "Laboratorial" },
             { nome: "Coágulo", tipo: "Laboratorial" },
             { nome: "Raio-X", tipo: "Imagem" },
@@ -136,6 +148,9 @@ function imprimirPDF() {
         );
     }
 
+    exames = exames.filter((exame, index, self) =>
+        index === self.findIndex((e) => e.nome === exame.nome)
+    );
     
  
     // Adicione mais verificações aqui para outras opções, se necessário
