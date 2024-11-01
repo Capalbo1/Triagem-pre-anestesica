@@ -46,7 +46,7 @@ function imprimirPDF() {
             { nome: "ECG", tipo: "Imagem" },
             { nome: "HMG", tipo: "Laboratorial" },
             { nome: "Eletrólitos", tipo: "Laboratorial" },
-            { nome: "Glicemia", tipo: "Imagem" },
+            { nome: "Glicemia", tipo: "Laboratorial" },
             { nome: "Albumina", tipo: "Laboratorial" }
             
         );
@@ -61,6 +61,105 @@ function imprimirPDF() {
             { nome: "ECG", tipo: "Imagem" },
             { nome: "HMG", tipo: "Laboratorial" },
             { nome: "Eletrólitos", tipo: "Laboratorial" },
+        );
+    }
+    if ( doençaSelecionada === "insuficiencia-cardiaca") {
+        exames.push(
+            { nome: "ECG", tipo: "Imagem" },
+            { nome: "HMG", tipo: "Laboratorial" },
+            { nome: "Eletrólitos", tipo: "Laboratorial" },
+            { nome: "Raio-x", tipo: "Laboratorial" },
+            { nome: "Ecocardiograma", tipo: "Imagem" },
+        );
+    }
+    if ( doençaSelecionada === "hipertensao-arterial-isquemica") {
+        exames.push(
+            { nome: "ECG", tipo: "Imagem" },
+            { nome: "HMG", tipo: "Laboratorial" },
+            { nome: "Eletrólitos", tipo: "Laboratorial" },
+            { nome: "Creatinina", tipo: "Laboratorial" },
+        );
+    }
+    if ( doençaSelecionada === "fibrilacao-atrial-cronica") {
+        exames.push(
+            { nome: "ECG", tipo: "Imagem" }
+        );
+    }
+    if ( doençaSelecionada === "doença-arterial-periferica") {
+        exames.push(
+            { nome: "ECG", tipo: "Imagem" },
+        );
+    }
+    if ( doençaSelecionada === "valvulopatias") {
+        exames.push(
+            { nome: "ECG", tipo: "Imagem" },
+            { nome: "Raio-x", tipo: "Laboratorial" },
+            { nome: "Ecocardiograma", tipo: "Imagem" },
+        );
+    }
+    if ( doençaSelecionada === "outras-arritmias") {
+        exames.push(
+            { nome: "ECG", tipo: "Imagem" },
+        );
+    }
+
+    if ( doençaSelecionada === "diabete-mellitus") {
+        exames.push(
+            { nome: "ECG", tipo: "Imagem" },
+            { nome: "Eletrólitos", tipo: "Laboratorial" },
+            { nome: "Creatinina", tipo: "Laboratorial" },
+            { nome: "Glicemia", tipo: "Laboratorial" }
+        );
+    }
+    if ( doençaSelecionada === "hipertireoidismo") {
+        exames.push(
+            { nome: "ECG", tipo: "Imagem" },
+            { nome: "Eletrólitos", tipo: "Laboratorial" },
+            { nome: "HMG", tipo: "Laboratorial" },
+            { nome: "Calcio", tipo: "Laboratorial" }
+        );
+    }
+    if ( doençaSelecionada === "hipotireoidismo") {
+        exames.push(
+            { nome: "ECG", tipo: "Imagem" },
+            { nome: "Eletrólitos", tipo: "Laboratorial" },
+            { nome: "HMG", tipo: "Laboratorial" }
+        );
+    }
+    if ( doençaSelecionada === "doenca-de-addison") {
+        exames.push(
+            { nome: "Eletrólitos", tipo: "Laboratorial" },
+            { nome: "HMG", tipo: "Laboratorial" },
+            { nome: "Glicemia", tipo: "Laboratorial" }
+        );
+    }
+    if ( doençaSelecionada === "doenca-de-cushing") {
+        exames.push(
+            { nome: "HMG", tipo: "Laboratorial" },
+            { nome: "Eletrólitos", tipo: "Laboratorial" },
+            { nome: "Glicemia", tipo: "Laboratorial" }
+        );
+    }
+    if ( doençaSelecionada === "hipoparatireoidismo") {
+        exames.push(
+            { nome: "ECG", tipo: "Imagem" },
+            { nome: "Eletrólitos", tipo: "Laboratorial" },
+            { nome: "HMG", tipo: "Laboratorial" },
+            { nome: "Calcio", tipo: "Laboratorial" }
+        );
+    }
+    if ( doençaSelecionada === "hiperparatireoidismo") {
+        exames.push(
+            { nome: "ECG", tipo: "Imagem" },
+            { nome: "Eletrólitos", tipo: "Laboratorial" },
+            { nome: "HMG", tipo: "Laboratorial" },
+            { nome: "Calcio", tipo: "Laboratorial" }
+        );
+    }
+    if ( doençaSelecionada === "obesidade-morbida") {
+        exames.push(
+            { nome: "ECG", tipo: "Imagem" },
+            { nome: "Glicemia", tipo: "Laboratorial" }
         );
     }
     // Captura a opção selecionada
