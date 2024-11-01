@@ -180,7 +180,7 @@ function imprimirPDF() {
             { nome: "Glicemia", tipo: "Laboratorial" }
         );
     }
-    if ( doençaSelecionada === "demencia") {
+    if ( doençaSelecionada === "alteraçõesvasculares/aneurisma") {
         exames.push(
             { nome: "ECG", tipo: "Imagem" },
             { nome: "HMG", tipo: "Laboratorial" },
