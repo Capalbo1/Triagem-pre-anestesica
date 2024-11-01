@@ -162,6 +162,72 @@ function imprimirPDF() {
             { nome: "Glicemia", tipo: "Laboratorial" }
         );
     }
+
+
+    if ( doençaSelecionada === "avc") {
+        exames.push(
+            { nome: "ECG", tipo: "Imagem" },
+            { nome: "HMG", tipo: "Laboratorial" },
+            { nome: "Eletrólitos", tipo: "Laboratorial" },
+            { nome: "Glicemia", tipo: "Laboratorial" }
+        );
+    }
+    if ( doençaSelecionada === "epilepsia") {
+        exames.push(
+            { nome: "ECG", tipo: "Imagem" },
+            { nome: "HMG", tipo: "Laboratorial" },
+            { nome: "Eletrólitos", tipo: "Laboratorial" },
+            { nome: "Glicemia", tipo: "Laboratorial" }
+        );
+    }
+    if ( doençaSelecionada === "demencia") {
+        exames.push(
+            { nome: "ECG", tipo: "Imagem" },
+            { nome: "HMG", tipo: "Laboratorial" },
+        );
+    }
+    if ( doençaSelecionada === "hepatite-infecciosa") {
+        exames.push(
+            { nome: "Coágulo", tipo: "Laboratorial" },
+            { nome: "TGO", tipo: "Laboratorial" },
+            { nome: "TGP", tipo: "Laboratorial" },
+            { nome: "Fosfatase alcalina", tipo: "Laboratorial" },
+            { nome: "Gama-GT", tipo: "Laboratorial" },
+        );
+    }
+    if ( doençaSelecionada === "hepatite-alcoolica") {
+        exames.push(
+            { nome: "Coágulo", tipo: "Laboratorial" },
+            { nome: "TGO", tipo: "Laboratorial" },
+            { nome: "TGP", tipo: "Laboratorial" },
+            { nome: "Fosfatase alcalina", tipo: "Laboratorial" },
+            { nome: "Gama-GT", tipo: "Laboratorial" },
+        );
+    }
+    if ( doençaSelecionada === "acometimento-neoplasico") {
+        exames.push(
+          { nome: "Coágulo", tipo: "Laboratorial" },
+            { nome: "TGO", tipo: "Laboratorial" },
+            { nome: "TGP", tipo: "Laboratorial" },
+            { nome: "Fosfatase alcalina", tipo: "Laboratorial" },
+            { nome: "Gama-GT", tipo: "Laboratorial" },
+        );
+    }
+    if ( doençaSelecionada === "asma") {
+        exames.push(
+          { nome: "ECG", tipo: "Laboratorial" },
+            { nome: "Raio-X", tipo: "imagem" },
+            { nome: "HMG", tipo: "Laboratorial" },
+        );
+    }
+    if ( doençaSelecionada === "dpoc") {
+        exames.push(
+            { nome: "ECG", tipo: "Laboratorial" },
+            { nome: "Raio-X", tipo: "imagem" },
+            { nome: "HMG", tipo: "Laboratorial" },
+        );
+    }
+
     // Captura a opção selecionada
     const opcaoSelecionada = document.querySelector('input[name="opcao"]:checked')?.value;
 
