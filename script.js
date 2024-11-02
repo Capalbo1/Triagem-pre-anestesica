@@ -51,19 +51,15 @@ function imprimirPDF() {
             
         );
     }
-
-    // Captura a opção selecionada
-    const doençaSelecionada = document.querySelector('input[name="doenças"]:checked')?.value;
-
-    // Lógica para adicionar exames com base na opção selecionada
-    if ( doençaSelecionada === "cardiopatia-isquemica") {
+    const doençaSelecionada = Array.from(document.querySelectorAll('input[name="doenças"]:checked')).map(input => input.value);
+    if ( doençaSelecionada.includes( "cardiopatia-isquemica")) {
         exames.push(
             { nome: "ECG", tipo: "Imagem" },
             { nome: "HMG", tipo: "Laboratorial" },
             { nome: "Eletrólitos", tipo: "Laboratorial" },
         );
     }
-    if ( doençaSelecionada === "insuficiencia-cardiaca") {
+    if ( doençaSelecionada.includes("insuficiencia-cardiaca")) {
         exames.push(
             { nome: "ECG", tipo: "Imagem" },
             { nome: "HMG", tipo: "Laboratorial" },
@@ -72,7 +68,7 @@ function imprimirPDF() {
             { nome: "Ecocardiograma", tipo: "Imagem" },
         );
     }
-    if ( doençaSelecionada === "hipertensao-arterial-isquemica") {
+    if ( doençaSelecionada.includes("hipertensao-arterial-isquemica")) {
         exames.push(
             { nome: "ECG", tipo: "Imagem" },
             { nome: "HMG", tipo: "Laboratorial" },
@@ -80,30 +76,30 @@ function imprimirPDF() {
             { nome: "Creatinina", tipo: "Laboratorial" },
         );
     }
-    if ( doençaSelecionada === "fibrilacao-atrial-cronica") {
+    if ( doençaSelecionada.includes( "fibrilacao-atrial-cronica")) {
         exames.push(
             { nome: "ECG", tipo: "Imagem" }
         );
     }
-    if ( doençaSelecionada === "doença-arterial-periferica") {
+    if ( doençaSelecionada.includes( "doença-arterial-periferica")) {
         exames.push(
             { nome: "ECG", tipo: "Imagem" },
         );
     }
-    if ( doençaSelecionada === "valvulopatias") {
+    if ( doençaSelecionada.includes( "valvulopatias")) {
         exames.push(
             { nome: "ECG", tipo: "Imagem" },
             { nome: "Raio-x", tipo: "Laboratorial" },
             { nome: "Ecocardiograma", tipo: "Imagem" },
         );
     }
-    if ( doençaSelecionada === "outras-arritmias") {
+    if ( doençaSelecionada.includes( "outras-arritmias")) {
         exames.push(
             { nome: "ECG", tipo: "Imagem" },
         );
     }
-
-    if ( doençaSelecionada === "diabete-mellitus") {
+   
+    if ( doençaSelecionada.includes( "diabete-mellitus")) {
         exames.push(
             { nome: "ECG", tipo: "Imagem" },
             { nome: "Eletrólitos", tipo: "Laboratorial" },
@@ -111,7 +107,7 @@ function imprimirPDF() {
             { nome: "Glicemia", tipo: "Laboratorial" }
         );
     }
-    if ( doençaSelecionada === "hipertireoidismo") {
+    if ( doençaSelecionada.includes( "hipertireoidismo")) {
         exames.push(
             { nome: "ECG", tipo: "Imagem" },
             { nome: "Eletrólitos", tipo: "Laboratorial" },
@@ -119,28 +115,28 @@ function imprimirPDF() {
             { nome: "Calcio", tipo: "Laboratorial" }
         );
     }
-    if ( doençaSelecionada === "hipotireoidismo") {
+    if ( doençaSelecionada.includes( "hipotireoidismo")) {
         exames.push(
             { nome: "ECG", tipo: "Imagem" },
             { nome: "Eletrólitos", tipo: "Laboratorial" },
             { nome: "HMG", tipo: "Laboratorial" }
         );
     }
-    if ( doençaSelecionada === "doenca-de-addison") {
+    if ( doençaSelecionada.includes( "doenca-de-addison")) {
         exames.push(
             { nome: "Eletrólitos", tipo: "Laboratorial" },
             { nome: "HMG", tipo: "Laboratorial" },
             { nome: "Glicemia", tipo: "Laboratorial" }
         );
     }
-    if ( doençaSelecionada === "doenca-de-cushing") {
+    if ( doençaSelecionada.includes( "doenca-de-cushing")) {
         exames.push(
             { nome: "HMG", tipo: "Laboratorial" },
             { nome: "Eletrólitos", tipo: "Laboratorial" },
             { nome: "Glicemia", tipo: "Laboratorial" }
         );
     }
-    if ( doençaSelecionada === "hipoparatireoidismo") {
+    if ( doençaSelecionada.includes( "hipoparatireoidismo")) {
         exames.push(
             { nome: "ECG", tipo: "Imagem" },
             { nome: "Eletrólitos", tipo: "Laboratorial" },
@@ -148,7 +144,7 @@ function imprimirPDF() {
             { nome: "Calcio", tipo: "Laboratorial" }
         );
     }
-    if ( doençaSelecionada === "hiperparatireoidismo") {
+    if ( doençaSelecionada.includes( "hiperparatireoidismo")) {
         exames.push(
             { nome: "ECG", tipo: "Imagem" },
             { nome: "Eletrólitos", tipo: "Laboratorial" },
@@ -156,15 +152,15 @@ function imprimirPDF() {
             { nome: "Calcio", tipo: "Laboratorial" }
         );
     }
-    if ( doençaSelecionada === "obesidade-morbida") {
+    if ( doençaSelecionada.includes( "obesidade-morbida")) {
         exames.push(
             { nome: "ECG", tipo: "Imagem" },
             { nome: "Glicemia", tipo: "Laboratorial" }
         );
     }
-
-
-    if ( doençaSelecionada === "avc") {
+   
+   
+    if ( doençaSelecionada.includes( "avc")) {
         exames.push(
             { nome: "ECG", tipo: "Imagem" },
             { nome: "HMG", tipo: "Laboratorial" },
@@ -172,7 +168,7 @@ function imprimirPDF() {
             { nome: "Glicemia", tipo: "Laboratorial" }
         );
     }
-    if ( doençaSelecionada === "epilepsia") {
+    if ( doençaSelecionada.includes( "epilepsia")) {
         exames.push(
             { nome: "ECG", tipo: "Imagem" },
             { nome: "HMG", tipo: "Laboratorial" },
@@ -180,13 +176,13 @@ function imprimirPDF() {
             { nome: "Glicemia", tipo: "Laboratorial" }
         );
     }
-    if ( doençaSelecionada === "alteraçõesvasculares/aneurisma") {
+    if ( doençaSelecionada.includes( "alteraçõesvasculares/aneurisma")) {
         exames.push(
             { nome: "ECG", tipo: "Imagem" },
             { nome: "HMG", tipo: "Laboratorial" },
         );
     }
-    if ( doençaSelecionada === "hepatite-infecciosa") {
+    if ( doençaSelecionada.includes( "hepatite-infecciosa")) {
         exames.push(
             { nome: "Coágulo", tipo: "Laboratorial" },
             { nome: "TGO", tipo: "Laboratorial" },
@@ -195,7 +191,7 @@ function imprimirPDF() {
             { nome: "Gama-GT", tipo: "Laboratorial" },
         );
     }
-    if ( doençaSelecionada === "hepatite-alcoolica") {
+    if ( doençaSelecionada.includes( "hepatite-alcoolica")) {
         exames.push(
             { nome: "Coágulo", tipo: "Laboratorial" },
             { nome: "TGO", tipo: "Laboratorial" },
@@ -204,7 +200,7 @@ function imprimirPDF() {
             { nome: "Gama-GT", tipo: "Laboratorial" },
         );
     }
-    if ( doençaSelecionada === "acometimento-neoplasico") {
+    if ( doençaSelecionada.includes( "acometimento-neoplasico")) {
         exames.push(
           { nome: "Coágulo", tipo: "Laboratorial" },
             { nome: "TGO", tipo: "Laboratorial" },
@@ -213,38 +209,38 @@ function imprimirPDF() {
             { nome: "Gama-GT", tipo: "Laboratorial" },
         );
     }
-    if ( doençaSelecionada === "asma") {
+    if ( doençaSelecionada.includes( "asma")) {
         exames.push(
           { nome: "ECG", tipo: "Laboratorial" },
             { nome: "Raio-X", tipo: "imagem" },
             { nome: "HMG", tipo: "Laboratorial" },
         );
     }
-    if ( doençaSelecionada === "dpoc") {
+    if ( doençaSelecionada.includes( "dpoc")) {
         exames.push(
             { nome: "ECG", tipo: "Laboratorial" },
             { nome: "Raio-X", tipo: "imagem" },
             { nome: "HMG", tipo: "Laboratorial" },
         );
     }
-    if ( doençaSelecionada === "doeca-renal") {
+    if ( doençaSelecionada.includes( "doeca-renal")) {
         exames.push(
             { nome: "HMG", tipo: "Laboratorial" },
             { nome: "Eletrólitos", tipo: "Lsboratorial" },
             { nome: "Creatina", tipo: "Laboratorial" },
         );
     }
-    if ( doençaSelecionada === "doenca-hematologica") {
+    if ( doençaSelecionada.includes ( "doenca-hematologica")) {
         exames.push(
             { nome: "HMG", tipo: "Laboratorial" },
         );
     }
-    if ( doençaSelecionada === "Coagulopatia") {
+    if ( doençaSelecionada.includes("Coagulopatia")) {
         exames.push(
             { nome: "HMG", tipo: "Laboratorial" },
         );
     }
-    if ( doençaSelecionada === "Disturbio-disabsortivo-desnutrição") {
+    if ( doençaSelecionada.includes ( "Disturbio-disabsortivo-desnutrição")) {
         exames.push(
             { nome: "HMG", tipo: "Laboratorial" },
             { nome: "ECG", tipo: "Imagem" },
@@ -254,32 +250,31 @@ function imprimirPDF() {
             { nome: "Albumina", tipo: "Laboratorial" },
         );
     }
-    if ( doençaSelecionada === "anticoagulantes") {
+    if ( doençaSelecionada.includes ( "anticoagulantes")) {
         exames.push(
             { nome: "HMG", tipo: "Laboratorial" },
             { nome: "Coagulograma", tipo: "Laboratorial" },
             { nome: "Cálcio", tipo: "Laboratorial" },
         );
     }
-    if ( doençaSelecionada === "Diuréticos") {
+    if ( doençaSelecionada.includes  ("Diuréticos")) {
         exames.push(
             { nome: "Eletrólitos", tipo: "Laboratorial" },
             { nome: "Creatina", tipo: "Laboratorial" },
         );
     }
-    if ( doençaSelecionada === "Corticosteróides") {
+    if ( doençaSelecionada.includes  ("Corticosteróides")) {
         exames.push(
             { nome: "HMG", tipo: "Laboratorial" },
             { nome: "Glicemia", tipo: "Laboratorial" },
         );
     }
-    if ( doençaSelecionada === "quimioterápicos") {
+    if ( doençaSelecionada.includes  ("quimioterápicos")) {
         exames.push(
             { nome: "HMG", tipo: "Laboratorial" },
             { nome: "Creatina", tipo: "Laboratorial" },
         );
     }
-    
 
     // Captura a opção selecionada
     const opcaoSelecionada = document.querySelector('input[name="opcao"]:checked')?.value;
