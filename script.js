@@ -36,7 +36,7 @@ function imprimirPDF() {
             { nome: "ECG", tipo: "Imagem" },
             { nome: "HMG", tipo: "Laboratorial" },
             { nome: "Eletrólitos", tipo: "Laboratorial" },
-            { nome: "Glicemia", tipo: "Imagem" },
+            { nome: "Glicemia", tipo: "Laboratorial" },
 
             
         );
@@ -61,10 +61,10 @@ function imprimirPDF() {
     }
     if ( doençaSelecionada.includes("insuficiencia-cardiaca")) {
         exames.push(
-            { nome: "ECG", tipo: "Imagem" },
+            { nome: "ECG", tipo: "imagem" },
             { nome: "HMG", tipo: "Laboratorial" },
             { nome: "Eletrólitos", tipo: "Laboratorial" },
-            { nome: "Raio-x", tipo: "Laboratorial" },
+            { nome: "Raio-x", tipo: "Imagem" },
             { nome: "Ecocardiograma", tipo: "Imagem" },
         );
     }
@@ -89,7 +89,7 @@ function imprimirPDF() {
     if ( doençaSelecionada.includes( "valvulopatias")) {
         exames.push(
             { nome: "ECG", tipo: "Imagem" },
-            { nome: "Raio-x", tipo: "Laboratorial" },
+            { nome: "Raio-x", tipo: "imagem" },
             { nome: "Ecocardiograma", tipo: "Imagem" },
         );
     }
@@ -112,7 +112,7 @@ function imprimirPDF() {
             { nome: "ECG", tipo: "Imagem" },
             { nome: "Eletrólitos", tipo: "Laboratorial" },
             { nome: "HMG", tipo: "Laboratorial" },
-            { nome: "Calcio", tipo: "Laboratorial" }
+            { nome: "Cálcio", tipo: "Laboratorial" }
         );
     }
     if ( doençaSelecionada.includes( "hipotireoidismo")) {
@@ -141,7 +141,7 @@ function imprimirPDF() {
             { nome: "ECG", tipo: "Imagem" },
             { nome: "Eletrólitos", tipo: "Laboratorial" },
             { nome: "HMG", tipo: "Laboratorial" },
-            { nome: "Calcio", tipo: "Laboratorial" }
+            { nome: "Cálcio", tipo: "Laboratorial" }
         );
     }
     if ( doençaSelecionada.includes( "hiperparatireoidismo")) {
@@ -149,7 +149,7 @@ function imprimirPDF() {
             { nome: "ECG", tipo: "Imagem" },
             { nome: "Eletrólitos", tipo: "Laboratorial" },
             { nome: "HMG", tipo: "Laboratorial" },
-            { nome: "Calcio", tipo: "Laboratorial" }
+            { nome: "Cálcio", tipo: "Laboratorial" }
         );
     }
     if ( doençaSelecionada.includes( "obesidade-morbida")) {
@@ -211,14 +211,14 @@ function imprimirPDF() {
     }
     if ( doençaSelecionada.includes( "asma")) {
         exames.push(
-          { nome: "ECG", tipo: "Laboratorial" },
+          { nome: "ECG", tipo: "imagem" },
             { nome: "Raio-X", tipo: "imagem" },
             { nome: "HMG", tipo: "Laboratorial" },
         );
     }
     if ( doençaSelecionada.includes( "dpoc")) {
         exames.push(
-            { nome: "ECG", tipo: "Laboratorial" },
+            { nome: "ECG", tipo: "imagem" },
             { nome: "Raio-X", tipo: "imagem" },
             { nome: "HMG", tipo: "Laboratorial" },
         );
@@ -226,8 +226,8 @@ function imprimirPDF() {
     if ( doençaSelecionada.includes( "doeca-renal")) {
         exames.push(
             { nome: "HMG", tipo: "Laboratorial" },
-            { nome: "Eletrólitos", tipo: "Lsboratorial" },
-            { nome: "Creatina", tipo: "Laboratorial" },
+            { nome: "Eletrólitos", tipo: "Laboratorial" },
+            { nome: "Creatinina", tipo: "Laboratorial" },
         );
     }
     if ( doençaSelecionada.includes ( "doenca-hematologica")) {
@@ -245,7 +245,7 @@ function imprimirPDF() {
             { nome: "HMG", tipo: "Laboratorial" },
             { nome: "ECG", tipo: "Imagem" },
             { nome: "Eletrólitos", tipo: "Laboratorial" },
-            { nome: "Creatina", tipo: "Laboratorial" },
+            { nome: "Creatinina", tipo: "Laboratorial" },
             { nome: "Glicemia", tipo: "Laboratorial" },
             { nome: "Albumina", tipo: "Laboratorial" },
         );
@@ -253,14 +253,14 @@ function imprimirPDF() {
     if ( doençaSelecionada.includes ( "anticoagulantes")) {
         exames.push(
             { nome: "HMG", tipo: "Laboratorial" },
-            { nome: "Coagulograma", tipo: "Laboratorial" },
+            { nome: "Coagulogram", tipo: "Laboratorial" },
             { nome: "Cálcio", tipo: "Laboratorial" },
         );
     }
     if ( doençaSelecionada.includes  ("Diuréticos")) {
         exames.push(
             { nome: "Eletrólitos", tipo: "Laboratorial" },
-            { nome: "Creatina", tipo: "Laboratorial" },
+            { nome: "Creatinina", tipo: "Laboratorial" },
         );
     }
     if ( doençaSelecionada.includes  ("Corticosteróides")) {
@@ -272,7 +272,7 @@ function imprimirPDF() {
     if ( doençaSelecionada.includes  ("quimioterápicos")) {
         exames.push(
             { nome: "HMG", tipo: "Laboratorial" },
-            { nome: "Creatina", tipo: "Laboratorial" },
+            { nome: "Creatinina", tipo: "Laboratorial" },
         );
     }
 
