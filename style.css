@@ -248,3 +248,16 @@ main {
     width: 300px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
+
+.obs{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 1.2em;
+    width: 65%;
+    margin-bottom: 5px;
+}
+
+.hidden {
+    display: none;
+}
+

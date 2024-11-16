@@ -37,7 +37,8 @@
                     </label>
                 </fieldset>
             </form>
-        <div class="sinais-porte">
+            
+            <div class="sinais-porte">
             
                <div class="sinais">
                 <h2>Sinais Vitais</h2>
@@ -220,8 +221,32 @@
                         </label>
                         
                     </fieldset>
+                    <fieldset class="Obstetrícia hidden" id="campo-obstetricia">
+                        <legend>Obstetrícia:</legend>
+                        <label>
+                            <input type="checkbox" name="gestante" value="Gestante atual" required>
+                            Gestante atual
+                        </label>
+                        <label>
+                            <input type="checkbox" name="gestante" value="Pré-eclâmpsia leve">
+                            Pré-eclâmpsia leve
+                        </label>
+                        <label>
+                            <input type="checkbox" name="gestante" value="Pré-eclâmpsia grave">
+                            Pré-eclâmpsia grave
+                        </label>
+                        <label>
+                            <input type="checkbox" name="gestante" value="Risco de hemorragia médio">
+                            Risco de hemorragia: médio
+                        </label>
+                        <label>
+                            <input type="checkbox" name="gestante" value="Risco de hemorragia: alto">
+                            Risco de hemorragia: alto
+                        </label>
+                    </fieldset>
                 </form>
             </div>
+                
         </section>
     </main>
     <footer>
@@ -231,6 +256,7 @@
 </body>
 <script src="script.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+<script src="abrirobs.js"></script>
 <div id="alerta" style="display: none;">
     <div class="conteudo-alerta">
         <span id="resultado"></span>
