@@ -12,3 +12,8 @@ inputsSexo.forEach(input => {
         }
     });
 });
+
+document.getElementById("reset").addEventListener("click", function () {
+    location.reload(); // Recarrega a página atual
+});
+

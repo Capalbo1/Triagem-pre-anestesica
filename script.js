@@ -275,6 +275,58 @@ function imprimirPDF() {
             { nome: "Creatinina", tipo: "Laboratorial" },
         );
     }
+    const doençaSelecionadaobs = Array.from(document.querySelectorAll('input[name="gestante"]:checked')).map(input => input.value);
+    if ( doençaSelecionadaobs.includes( "Gestante atual")) {
+        exames.push(
+            { nome: "HEMOGRAMA", tipo: "Laboratorial" },
+            { nome: "COAGULOGRAMA", tipo: "Laboratorial" },
+        );
+    }
+    if ( doençaSelecionadaobs.includes( "Pré-eclâmpsia leve")) {
+        exames.push(
+            { nome: "HEMOGRAMA", tipo: "Laboratorial" },
+            { nome: "COAGULOGRAMA", tipo: "Laboratorial" },
+            { nome: "TGO", tipo: "Laboratorial" },
+            { nome: "TGP", tipo: "Laboratorial" },
+            { nome: "DESIDROGENASE LÁCTICA", tipo: "Laboratorial" },
+            { nome: "BILIRRUBINAS TOTAIS E FRAÇÕES", tipo: "Laboratorial" },
+            { nome: "FIBRINOGÊNIO", tipo: "Laboratorial" },
+            { nome: "CREATININA", tipo: "Laboratorial" },
+        );
+    }
+    if ( doençaSelecionadaobs.includes("Pré-eclâmpsia grave")) {
+        exames.push(
+            { nome: "HEMOGRAMA", tipo: "Laboratorial" },
+            { nome: "COAGULOGRAMA", tipo: "Laboratorial" },
+            { nome: "TGO", tipo: "Laboratorial" },
+            { nome: "TGP", tipo: "Laboratorial" },
+            { nome: "DESIDROGENASE LÁCTICA", tipo: "Laboratorial" },
+            { nome: "BILIRRUBINAS TOTAIS E FRAÇÕES", tipo: "Laboratorial" },
+            { nome: "FIBRINOGÊNIO", tipo: "Laboratorial" },
+            { nome: "CREATININA", tipo: "Laboratorial" },
+        );
+    }
+    
+    if ( doençaSelecionadaobs.includes( "Risco de hemorragia médio")) {
+        exames.push(
+            { nome: "HEMOGRAMA", tipo: "Laboratorial" },
+            { nome: "COAGULOGRAMA", tipo: "Laboratorial" },
+            { nome: "FIBRINOGÊNIO", tipo: "Laboratorial" },
+            { nome: "CREATININA", tipo: "Laboratorial" },
+            { nome: "TIPAGEM SANGUÍNEA ABO", tipo: "Laboratorial" },
+            { nome: "TIPAGEM SANGUÍNEA RH", tipo: "Laboratorial" },
+        );
+    }
+    if ( doençaSelecionadaobs.includes( "Risco de hemorragia alto")) {
+        exames.push(
+            { nome: "HEMOGRAMA", tipo: "Laboratorial" },
+            { nome: "COAGULOGRAMA", tipo: "Laboratorial" },
+            { nome: "FIBRINOGÊNIO", tipo: "Laboratorial" },
+            { nome: "CREATININA", tipo: "Laboratorial" },
+            { nome: "TIPAGEM SANGUÍNEA ABO", tipo: "Laboratorial" },
+            { nome: "TIPAGEM SANGUÍNEA RH", tipo: "Laboratorial" },
+        );
+    }
 
     // Captura a opção selecionada
     const opcaoSelecionada = document.querySelector('input[name="opcao"]:checked')?.value;
